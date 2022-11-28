@@ -1,2 +1,11 @@
-the_program_to_hide = win32gui.GetForegroundWindow()
-win32gui.ShowWindow(the_program_to_hide , win32con.SW_HIDE)
+function test_function( $user_id ) {
+
+	$result = bp_set_member_type( $user_id, 'rwi-member' );
+
+	if ( false === $result ) {
+		wp_die( 'ERROR - invalid type' );
+	}
+
+}
+
+add_action( 'user_register', 'test_function' );
