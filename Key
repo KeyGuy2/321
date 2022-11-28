@@ -1,2 +1,1 @@
-wait = WebDriverWait(driver, 15)
-waits = WebDriverWait(driver, 3)
+hello
